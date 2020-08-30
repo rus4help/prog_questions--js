@@ -1,0 +1,23 @@
+{
+    "name": "prog_questions--js",
+    "version": "1.0.0",
+    "description": "Программа для задавания вопросов",
+    "main": "app.js",
+    "scripts": {
+        "start": "webpack-dev-server --mode development --open",
+        "build": "webpack --mode production"
+    },
+    "keywords": [
+        "js",
+        "javascript"
+    ],
+    "author": "Denis Nikhaev",
+    "license": "ISC",
+    "devDependencies": {
+        "clean-webpack-plugin": "^3.0.0",
+        "html-webpack-plugin": "^4.4.0",
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12",
+        "webpack-dev-server": "^3.11.0"
+    }
+}
