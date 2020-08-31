@@ -1,3 +1,4 @@
+import { Question } from './question'
 import { isValid } from './utils' // имортируем функцию для проверки валидации формы
 import './styles.css'             // имортируем стили проекта
 
@@ -21,10 +22,10 @@ function submitFormHandler(event) {
 
         submitBtn.disabled = true // блокируем кнопку для предотвращения спама отправки данных до завершения самой отправки
         // После получение данных нужно асинхронно отправить данные на сервер для сохранения
-        console.log('Question', question)
-
-        input.value = ''        // после завершения отправки запроса очищаем форму
-        input.className = ''    // очищаем ненужные классы у поля
-        submitBtn.disabled = false  // делаем кнопку активной 
+        Question.create(question).then(() => {
+            input.value = ''        // после завершения отправки запроса очищаем форму
+            input.className = ''    // очищаем ненужные классы у поля
+            submitBtn.disabled = false  // делаем кнопку активной 
+        })
     }
 }
