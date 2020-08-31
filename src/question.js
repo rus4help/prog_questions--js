@@ -38,7 +38,7 @@ function getQuestionsFromLocalStorage() { // функция получения �
     return JSON.parse(localStorage.getItem('questions') || '[]') // возвращаем все вопросы в массиве или пустой массив
 }
 
-function toCard(question) {
+function toCard(question) { // функция генерации шаблона для отображения одного вопроса
     return `
         <div class="mui--text-black-54">
             ${new Date(question.date).toLocaleDateString()}
